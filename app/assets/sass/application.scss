@@ -1,0 +1,125 @@
+// Import GOV.UK elements, this will import the frontend toolkit and some base styles.
+// Take a look in _govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at patterns.scss to see which files are imported.
+@import 'patterns';
+
+// If you need to create a page as part of your journey, but without GOV.UK branding
+// See localhost:3000/examples/unbranded/
+.unbranded {
+  background: $white;
+  // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
+  * {
+    font-family: $Helvetica-Regular !important;
+  }
+  // Remove GOV.UK footer styles
+  #footer {
+    border: 0;
+    background: $white;
+  }
+}
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $department-for-work-pensions;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Things that *should* be in base.scss
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Digital DWP styles
+#global-header #logo {
+  font-size:16px;
+  line-height:1;
+  padding-left:5px;
+  @media (min-width:330px) {
+    font-size:16px;
+    line-height:30px
+  }
+  @media (min-width:480px) {
+    font-size:19px;
+    line-height:30px
+  }
+  @media (min-width:800px) {
+    font-size:30px;
+  }
+}
+
+#global-header-bar {
+  background-color:$turquoise;
+}
+
+#global-header .header-wrapper .header-global .header-logo {
+  width: 100%;
+}
+
+.hgroup {
+  margin: 30px 0;
+}
+
+.job-title {
+  padding-bottom: 5px;
+  color: $department-for-work-pensions;
+  border-bottom: 2px dotted $department-for-work-pensions;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.img-profile {
+  border: 5px solid $grey-4;
+  border-radius: 50%;
+  float: right;
+}
+
+.lede {
+  color: $grey-1;
+}
+
+.quoted {
+  margin: 30px 60px 30px 30px;
+  padding-left: 10px;
+  border-left: 2px solid $department-for-work-pensions;
+}
+
+// Typed cursor
+.typed-cursor{
+    opacity: 1;
+    color: $department-for-work-pensions;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
