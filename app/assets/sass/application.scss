@@ -24,7 +24,7 @@
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
   margin-top: $gutter;
-  border-top: 10px solid $department-for-work-pensions;
+  border-top: 2px solid $black;
   padding-top: 5px;
 
   .heading-medium {
@@ -41,10 +41,42 @@
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 // Things that *should* be in base.scss
+body {
+  border-top: 2px solid $black;
+}
 img {
   max-width: 100%;
   height: auto;
 }
+
+// DWP organisation styles
+a, a:link, a:active, a:visited {
+  color: $department-for-work-pensions-websafe;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  color: lighten($department-for-work-pensions-websafe, 10);
+}
+.department-logo {
+  margin: 30px 0;
+}
+.department-logo h1 {
+  border-left: 2px solid $department-for-work-pensions;
+  font-size: 27px;
+  line-height: 30px;
+}
+.department-logo .royal-crest {
+  padding: 40px 0 0 7px;
+  background-image: url(/public/images/crests/org_crest_27px.png);
+  background-repeat: no-repeat;
+  background-position: 6px top;
+  background-size: auto 40px;
+  display: block;
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url(/public/images/crests/org_crest_27px_x2.png);
+  }
+}
+
 
 // Digital DWP styles
 #global-header #logo {
@@ -65,7 +97,7 @@ img {
 }
 
 #global-header-bar {
-  background-color:$turquoise;
+  background-color:$department-for-work-pensions;
 }
 
 #global-header .header-wrapper .header-global .header-logo {
@@ -78,10 +110,8 @@ img {
 
 .job-title {
   padding-bottom: 5px;
-  color: $department-for-work-pensions;
-  border-bottom: 2px dotted $department-for-work-pensions;
+  color: $department-for-work-pensions-websafe;
   white-space: nowrap;
-  font-weight: 400;
 }
 
 .img-profile {
@@ -103,7 +133,7 @@ img {
 // Typed cursor
 .typed-cursor{
     opacity: 1;
-    color: $department-for-work-pensions;
+    color: $black;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
