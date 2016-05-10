@@ -50,15 +50,22 @@ img {
 }
 
 // DWP organisation styles
-a, a:link, a:active, a:visited {
+a {
   color: $department-for-work-pensions-websafe;
-  text-decoration: underline;
-}
-a:hover, a:focus {
-  color: lighten($department-for-work-pensions-websafe, 10);
+
+  &:link,
+  &:active,
+  &:visited {
+    color: $department-for-work-pensions-websafe;
+  }
+
+  &:hover,
+  &:focus {
+    color: lighten($department-for-work-pensions-websafe, 15%);
+  }
 }
 .department-logo {
-  margin: 30px 0;
+  margin: 30px 15px;
 }
 .department-logo .royal-crest {
   padding: 28px 0 0 6px;
@@ -74,12 +81,46 @@ a:hover, a:focus {
     background-image: url(/public/images/crests/org_crest_18px_x2.png);
   }
 }
-.heading-xlarge .heading-secondary{
-  color: $department-for-work-pensions-websafe;
-  font-weight: 700;
+.heading-xxlarge {
+  @include bold-80();
+  margin-top: em(15, 32);
+  margin-bottom: em(30, 32);
+  text-align: center;
+
+  @include media(tablet) {
+    margin-top: em(30, 48);
+    margin-bottom: em(60, 48);
+  }
+  .heading-secondary {
+    @include heading-27();
+    display: block;
+    color: $department-for-work-pensions-websafe;
+    font-weight: 700;
+  }
+
+}
+.heading-medium {
+  border-bottom: 1px solid $grey-2;
+  padding-bottom: 10px;
+}
+.button {
+  background-color: $department-for-work-pensions-websafe;
+
+  &:visited {
+    background-color: $department-for-work-pensions-websafe;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($department-for-work-pensions-websafe, 5%);
+  }
+
+}
+.govuk-related-items {
+  border-top: none;
 }
 
-// Digital DWP styles
+// Digital DWP job styles
 #global-header #logo {
   font-size:16px;
   line-height:1;
@@ -96,36 +137,26 @@ a:hover, a:focus {
     font-size:30px;
   }
 }
-
 #global-header-bar {
   background-color:$department-for-work-pensions;
 }
-
 #global-header .header-wrapper .header-global .header-logo {
   width: 100%;
 }
-
-.hgroup {
-  margin: 30px 0;
-}
-
 .job-title {
   padding-bottom: 5px;
   color: $department-for-work-pensions-websafe;
-  white-space: nowrap;
 }
-
 .img-profile {
   border: 5px solid $grey-4;
   border-radius: 50%;
   float: right;
 }
-
 .quoted {
-  margin: 30px 60px 30px 30px;
+  margin: 30px 60px 30px 15px;
   padding-left: 10px;
   border-left: 2px solid $department-for-work-pensions;
-  color: $department-for-work-pensions-websafe;
+  color: $grey-1;
   font-weight: 700;
 }
 
