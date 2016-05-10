@@ -11,7 +11,7 @@
   background: $white;
   // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
   * {
-    font-family: $Helvetica-Regular !important;
+    font-family: nta, $Helvetica-Regular !important;
   }
   // Remove GOV.UK footer styles
   #footer {
@@ -60,23 +60,24 @@ a:hover, a:focus {
 .department-logo {
   margin: 30px 0;
 }
-.department-logo h1 {
-  border-left: 2px solid $department-for-work-pensions;
-  font-size: 27px;
-  line-height: 30px;
-}
 .department-logo .royal-crest {
-  padding: 40px 0 0 7px;
-  background-image: url(/public/images/crests/org_crest_27px.png);
+  padding: 28px 0 0 6px;
+  background-image: url(/public/images/crests/org_crest_18px.png);
   background-repeat: no-repeat;
   background-position: 6px top;
-  background-size: auto 40px;
+  background-size: auto 26px;
   display: block;
+  border-left: 2px solid $department-for-work-pensions;
+  font-size: 19px;
+  line-height: 21px;
   @media (-webkit-min-device-pixel-ratio: 2) {
-    background-image: url(/public/images/crests/org_crest_27px_x2.png);
+    background-image: url(/public/images/crests/org_crest_18px_x2.png);
   }
 }
-
+.heading-xlarge .heading-secondary{
+  color: $department-for-work-pensions-websafe;
+  font-weight: 700;
+}
 
 // Digital DWP styles
 #global-header #logo {
@@ -120,14 +121,12 @@ a:hover, a:focus {
   float: right;
 }
 
-.lede {
-  color: $grey-1;
-}
-
 .quoted {
   margin: 30px 60px 30px 30px;
   padding-left: 10px;
   border-left: 2px solid $department-for-work-pensions;
+  color: $department-for-work-pensions-websafe;
+  font-weight: 700;
 }
 
 // Typed cursor
