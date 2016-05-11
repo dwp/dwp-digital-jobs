@@ -2,6 +2,7 @@
 $(function(){
     $(".job-title").typed({
       stringsElement: $('#typed-strings'),
+      contentType: 'type',
       typeSpeed: 50,
       startDelay: 500,
       backDelay: 1000
