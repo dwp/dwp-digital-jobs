@@ -65,27 +65,55 @@ a {
   }
 }
 .department-logo {
-  margin: 30px 15px;
+  margin: 30px 0;
 }
 .department-logo .royal-crest {
-  padding: 28px 0 0 6px;
-  background-image: url(/public/images/crests/org_crest_18px.png);
+  padding: 22px 0 0 5px;
+  background-image: url(/public/images/crests/org_crest_13px.png);
   background-repeat: no-repeat;
-  background-position: 6px top;
-  background-size: auto 26px;
+  background-position: 5px top;
+  background-size: auto 20px;
   display: block;
   border-left: 2px solid $department-for-work-pensions;
-  font-size: 19px;
-  line-height: 21px;
+  font-size: 13px;
+  line-height: 15px;
   @media (-webkit-min-device-pixel-ratio: 2) {
-    background-image: url(/public/images/crests/org_crest_18px_x2.png);
+    background-image: url(/public/images/crests/org_crest_13px_x2.png);
   }
+  @include media(tablet) {
+    padding: 28px 0 0 8px;
+    background-image: url(/public/images/crests/org_crest_18px.png);
+    background-repeat: no-repeat;
+    background-position: 8px top;
+    background-size: auto 26px;
+    display: block;
+    border-left: 2px solid $department-for-work-pensions;
+    font-size: 18px;
+    line-height: 21px;
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background-image: url(/public/images/crests/org_crest_18px_x2.png);
+    }
+  }
+  @include media(desktop) {
+    padding: 42px 0 0 10px;
+    background-image: url(/public/images/crests/org_crest_27px.png);
+    background-repeat: no-repeat;
+    background-position: 10px top;
+    background-size: auto 40px;
+    display: block;
+    border-left: 2px solid $department-for-work-pensions;
+    font-size: 27px;
+    line-height: 30px;
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background-image: url(/public/images/crests/org_crest_27px_x2.png);
+    }
+  }
+
 }
 .heading-xxlarge {
   @include bold-80();
   margin-top: em(15, 32);
   margin-bottom: em(30, 32);
-  text-align: center;
 
   @include media(tablet) {
     margin-top: em(30, 48);
@@ -153,11 +181,11 @@ a {
   float: right;
 }
 .quoted {
-  margin: 30px 60px 30px 15px;
+  margin: 30px 45px 30px 15px;
   padding-left: 10px;
   border-left: 2px solid $department-for-work-pensions;
   color: $grey-1;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 // Typed cursor
