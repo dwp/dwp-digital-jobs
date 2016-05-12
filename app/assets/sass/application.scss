@@ -175,8 +175,14 @@ a {
   padding-bottom: 5px;
   color: $department-for-work-pensions-websafe;
 }
+.img-hero,
 .img-profile {
   border: 5px solid $grey-4;
+}
+.img-hero {
+  margin: -5px;
+}
+.img-profile {
   border-radius: 50%;
   float: right;
 }
