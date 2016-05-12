@@ -8,6 +8,17 @@ $(function(){
       backDelay: 1000
     });
 });
+// stop typed.js on scroll
+function stopTyped() {
+  var scrollTop = $(window).scrollTop(),
+      $jobTitle = $('.job-title'),
+      headerHeight = $('p.font-large').offset().top;
+
+  if (scrollTop >= headerHeight) {
+    $jobTitle.replaceWith('part of a team.');
+  }
+}
+$(window).scroll(stopTyped);
 
 // Default application.js
 
