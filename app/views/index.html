@@ -156,11 +156,41 @@
         Alternatively, <a href="mailto:SPECIALISTRECRUITMENT.TEAM@DWP.GSI.GOV.UK">send us your CV</a> and we'll be in touch should anything become available.
       </p>-->
 
+      <h2 class="heading-large">Current vacancies</h2>
+
+      {% for job in jobs %}
+      <div class="job">
+        <a href="/{{loop.index0}}">
+          <h2 class="bold-medium">
+            {{job.title}}
+          </h2>
+            <ul>
+              <li class="font-xsmall">
+                Location: <span class="bold-small">{{job.jobLocation.address.addressLocality}}</span>
+              </li>
+              <li class="font-xsmall">
+                Salary up to: <span class="bold-small">&pound;{{job.maxSalary}}</span>
+              </li>
+              <li class="font-xsmall">
+                Closing date: <span class="bold-small">{{ job.dateClosing }}</span>
+              </li>
+            </ul>
+        </a>
+      </div>
+      {% endfor %}
+
+      <p>
+        <a href="http://digital.dwp.gov.uk/careers/search-vacancies/" class="bold-xsmall">
+          View all <span class="visuallyhidden">jobs on DWP Careers</span>
+        </a>
+      </p>
+
     </div>
 
     <div class="column-third">
 
       <aside class="govuk-related-items" role="complementary">
+        <!--
         <h2 class="heading-medium" id="subsection-title">We're hiring</h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="font-xsmall list">
@@ -169,6 +199,7 @@
             <li><a href="http://digital.dwp.gov.uk/careers/search-vacancies/" class="bold-xsmall">More <span class="visuallyhidden">jobs on DWP Careers</span></a></li>
           </ul>
         </nav>
+      -->
 
         <h2 class="heading-medium">Find out more</h2>
   			<ul class="font-xsmall list">
