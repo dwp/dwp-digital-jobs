@@ -1,0 +1,139 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Digital DWP Careers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <header>
+
+    <div class="department-logo">
+      <span class="royal-crest">
+        Department<br>for Work &amp; <br>Pensions
+      </span>
+    </div>
+
+    <h1 class="heading-xxlarge">
+      About DWP
+      <span class="heading-secondary">
+        Helping people through work, saving and support
+      </span>
+    </h1>
+  </header>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p class="lede">
+        We have a very important purpose – helping people lift themselves out of poverty and stay out of poverty.
+      </p>
+
+      <p>
+        We design and deliver public services that millions of people rely on. We transform lives by helping the most disadvantaged people to turn their lives around. Last year we helped 105,000 families turn their lives around through the troubled Families Programme.
+      </p>
+
+      <p>
+        We touch almost every citizen in the UK at some point in their lives. From recognising the importance of family in provided the foundations of every child’s life, by encouraging work – and making it pay, by enabling work and independence for those with disabilities or ill-health and by promoting firm foundations for retirement – helping those in the later stages of life to maintain their standard of living.
+      </p>
+
+      <p class="lede quoted">We are the largest Government Department, delivering once in a lifetime welfare reform</p>
+
+      <p class="lede quoted">Last year we helped 2.6m people off Jobseeker's Allowance and paid 22m people £167.6bn in benefits and pensions</p>
+
+      <p class="lede quoted">We saw a record 31.1m people in employment, and helped more than 32,400 disabled people find and stay in work</p>
+
+      <h2 class="heading-large">Find out when we're hiring</h2>
+
+      <p>
+        We're always looking for great people to join us. Our jobs change regularly, so keep checking back.
+      <p>
+
+      <p>
+        <a class="button" href="https://twitter.com/digitalDWPjobs">
+          Get job updates
+        </a>
+      </p>
+
+      <!--<p>
+        Alternatively, <a href="mailto:SPECIALISTRECRUITMENT.TEAM@DWP.GSI.GOV.UK">send us your CV</a> and we'll be in touch should anything become available.
+      </p>-->
+
+      <h2 class="heading-large">Current vacancies</h2>
+
+      {% for job in jobs %}
+      <div class="job">
+        <a href="/{{loop.index0}}">
+          <h2 class="bold-medium">
+            {{job.title}}
+          </h2>
+            <ul>
+              <li class="font-xsmall">
+                Location: <span class="bold-small">{{job.jobLocation.address.addressLocality}}</span>
+              </li>
+              <li class="font-xsmall">
+                Salary up to: <span class="bold-small">&pound;{{job.maxSalary}}</span>
+              </li>
+              <li class="font-xsmall">
+                Closing date: <span class="bold-small">{{ job.dateClosing }}</span>
+              </li>
+            </ul>
+        </a>
+      </div>
+      {% endfor %}
+
+      <p>
+        <a href="http://digital.dwp.gov.uk/careers/search-vacancies/" class="bold-xsmall">
+          View all <span class="visuallyhidden">jobs on DWP Careers</span>
+        </a>
+      </p>
+
+    </div>
+
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+
+        <h2 class="heading-medium">Find out more</h2>
+  			<ul class="font-xsmall list">
+  				<li>
+  					<a href="https://digitaldwp.blog.gov.uk">
+  						Read our blog
+  					</a>
+  				</li>
+  				<li>
+  					<a href="https://twitter.com/DigitalDWP">
+  						Follow @DigitalDWP
+  					</a>
+  				</li>
+          <li>
+  					<a href="https://twitter.com/DWPTechnology">
+  						Follow @DWPTechnology
+  					</a>
+  				</li>
+  			</ul>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid-row">
+    <div class="column-third">
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/GUC6lqrMQPg?wmode=transparent&amp;fs=1" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    <div class="column-third">
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/GtreNGmeexo?wmode=transparent&amp;fs=1" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    <div class="column-third">
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/FF9NlBfzIGM?wmode=transparent&amp;fs=1" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
