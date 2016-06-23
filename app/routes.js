@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
   res.render('index', {jobs: data.jobs});
 });
 
-router.get('/:id', function(req, res) {
+router.get('/job/:id', function(req, res) {
   var fs = require('fs');
   var data = fs.readFileSync(__dirname + '/assets/data/dwp-jobs.json', 'utf-8');
       data = JSON.parse(data);
