@@ -6,6 +6,18 @@ router.get('/', function (req, res) {
   var data = fs.readFileSync(__dirname + '/assets/data/dwp-jobs.json', 'utf-8');
       data = JSON.parse(data);
 
+      /*
+      var files = fs.readdirSync(__dirname + '/assets/data/');
+      var items = files.length;
+       {
+        for (var i=0; i<items.length; i++) {
+          var data = fs.readFileSync(__dirname + '/assets/data/' + items[i]);
+          data = JSON.parse(data);
+        }
+      });
+      console.log(items);
+      */
+
   res.render('index', {jobs: data.jobs});
 });
 
