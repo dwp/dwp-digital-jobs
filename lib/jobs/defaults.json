@@ -1,0 +1,32 @@
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "dateClosing": "",
+  "datePosted": "",
+  "description": "",
+  "employmentType": "Permanent, Employed",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Department for Work and Pensions",
+    "contactPoint": "Pearl Cox",
+    "email": "SPECIALISTRECRUITMENT.TEAM@DWP.GSI.GOV.UK",
+    "telephone": "02073404228",
+    "disabilityConfident": "Yes"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Leeds",
+      "addressRegion": "West Yorkshire",
+      "postalCode": "LS10 1ET"
+    }
+  },
+  "maxSalary": "",
+  "reference": "",
+  "responsibilities": "",
+  "skills": "",
+  "title": "Job title",
+  "url": "https://www.civilservicejobs.service.gov.uk/",
+  "workHours": ""
+}

@@ -164,7 +164,7 @@
 
       <h2 class="heading-large">Current vacancies</h2>
 
-      {% for job in jobs %}
+      {% for job in data %}
       <div class="job">
         <a href="/job/{{loop.index0}}">
           <h2 class="bold-medium">
@@ -198,7 +198,7 @@
       <aside class="govuk-related-items" role="complementary">
 
         {% include "includes/side_navigation.html" %}
-        
+
       </aside>
 
     </div>
