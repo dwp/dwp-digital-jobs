@@ -14,7 +14,7 @@ var path = require('path'),
     utils = require(__dirname + '/lib/utils.js'),
     packageJson = require(__dirname + '/package.json'),
 
-// Grab environment variables specified in Procfile or as Heroku config vars
+    // Grab environment variables specified in Procfile or as Heroku config vars
     releaseVersion = packageJson.version;
     username = process.env.USERNAME,
     password = process.env.PASSWORD,
@@ -139,9 +139,8 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 
 });
 
-console.log("\nGOV.UK Prototype kit v" + releaseVersion);
-// Display warning not to use kit for production services.
-console.log("\nNOTICE: the kit is for building prototypes, do not use it for production services.");
+console.log("\nMade with 💙  by Charles RT");
+console.log("\nBuilt on GOV.UK prototype kit v" + releaseVersion + " 👍");
 
 // start the app
 utils.findAvailablePort(app);
