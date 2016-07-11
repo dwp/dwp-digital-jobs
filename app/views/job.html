@@ -69,13 +69,21 @@
 		    </tbody>
 		  </table>
 
+      {% if job.responsibilities %}
+
 			<h2 class="heading-medium">Responsibilities</h2>
 
 			<p>{{job.responsibilities | safe}}</p>
 
+      {% endif %}
+
+      {% if job.skills %}
+
 			<h2 class="heading-medium">Skills</h2>
 
 			<p>{{job.skills | safe}}</p>
+
+      {% endif %}
 
       {% if job.qualifications %}
 
