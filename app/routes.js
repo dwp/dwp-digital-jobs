@@ -1,44 +1,36 @@
 var express = require('express');
-var router = express.Router();
+    router = express.Router();
+    _ = require('underscore');
 
 router.get('/', function (req, res) {
-  var fs = require('fs');
-  var data = fs.readFileSync(__dirname + '/assets/data/dwp-jobs.json', 'utf-8');
-      data = JSON.parse(data);
+  var data = req.app.locals.data;
+  var now = new Date();
 
-      /*
-      var files = fs.readdirSync(__dirname + '/assets/data/');
-      var items = files.length;
-       {
-        for (var i=0; i<items.length; i++) {
-          var data = fs.readFileSync(__dirname + '/assets/data/' + items[i]);
-          data = JSON.parse(data);
-        }
-      });
-      console.log(items);
-      */
+  for (job in data) {
+  var title = data[job].title;
+      slug = title.replace(/\s+/g, '-').toLowerCase();
+      data[job].slug = slug;
+      nd = new Date(data[job].dateClosing);
+      data[job].dateClosingString = nd;
+  }
 
-  res.render('index', {jobs: data.jobs});
+  res.render('index', {data, now});
 });
 
-router.get('/job/:id', function(req, res) {
-  var fs = require('fs');
-  var data = fs.readFileSync(__dirname + '/assets/data/dwp-jobs.json', 'utf-8');
-      data = JSON.parse(data);
+router.get('/job/:reference/:title', function(req, res) {
+  var data = req.app.locals.data;
 
   res.render('job', {
-    job : data.jobs[req.params.id],
-    jobString : JSON.stringify(data.jobs[req.params.id]),
-    jobID : [req.params.id]
+    job : _.findWhere(data, {reference: req.params.reference}),
+    jobString : JSON.stringify(_.findWhere(data, {reference: req.params.reference})),
+    jobID : [req.params.reference]
   });
 });
 
-router.get('/api/:id', function(req, res) {
-  var fs = require('fs');
-  var data = fs.readFileSync(__dirname + '/assets/data/dwp-jobs.json', 'utf-8');
-      data = JSON.parse(data);
+router.get('/api/:reference', function(req, res) {
+  var data = req.app.locals.data;
 
-res.json(data.jobs[req.params.id]);
+res.json(_.findWhere(data, {reference: req.params.reference}));
 });
 
 module.exports = router;

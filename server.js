@@ -1,4 +1,7 @@
 var path = require('path'),
+    fs = require('fs'),
+    merge = require('merge'),
+    _ = require('underscore');
     express = require('express'),
     nunjucks = require('express-nunjucks'),
     routes = require(__dirname + '/app/routes.js'),
@@ -11,7 +14,7 @@ var path = require('path'),
     utils = require(__dirname + '/lib/utils.js'),
     packageJson = require(__dirname + '/package.json'),
 
-// Grab environment variables specified in Procfile or as Heroku config vars
+    // Grab environment variables specified in Procfile or as Heroku config vars
     releaseVersion = packageJson.version;
     username = process.env.USERNAME,
     password = process.env.PASSWORD,
@@ -20,6 +23,24 @@ var path = require('path'),
 
     env      = env.toLowerCase();
     useAuth  = useAuth.toLowerCase();
+
+// Load all the job data from the files.
+var defaults = JSON.parse(fs.readFileSync(__dirname + '/lib/jobs/defaults.json').toString());
+var files = fs.readdirSync(__dirname + '/lib/jobs/');
+app.locals.data = [];
+_.each(files,function(el)
+{
+  if (el == 'defaults.json') return;
+  if (el == 'blank.json') return;
+  var file = fs.readFileSync(__dirname + '/lib/jobs/'+el).toString();
+  try {
+    var json = merge(true,defaults,JSON.parse(file));
+    json.filename = el;
+    app.locals.data.push(json);
+  } catch(err) {
+    console.log(err);
+  }
+});
 
 // Authenticate against the environment-provided credentials, if running
 // the app in production (Heroku, effectively)
@@ -118,9 +139,8 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 
 });
 
-console.log("\nGOV.UK Prototype kit v" + releaseVersion);
-// Display warning not to use kit for production services.
-console.log("\nNOTICE: the kit is for building prototypes, do not use it for production services.");
+console.log("\nMade with 💙  by Charles RT");
+console.log("\nBuilt on GOV.UK prototype kit v" + releaseVersion + " 👍");
 
 // start the app
 utils.findAvailablePort(app);

@@ -1,0 +1,22 @@
+{
+  "title": "Job title",
+  "reference": "",
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "City",
+      "addressRegion": "County",
+      "postalCode": ""
+    }
+  },
+  "maxSalary": "£",
+  "workHours": "",
+  "employmentType": "",
+  "dateClosing": "DD MMM YYYY",
+  "datePosted": "DD MMM YYYY",
+  "responsibilities": "",
+  "skills": "",
+  "description": "",
+  "url": "https://www.civilservicejobs.service.gov.uk/"
+}
