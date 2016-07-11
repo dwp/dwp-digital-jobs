@@ -17,9 +17,9 @@
     "@type": "Place",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Leeds",
-      "addressRegion": "West Yorkshire",
-      "postalCode": "LS10 1ET"
+      "addressLocality": "",
+      "addressRegion": "",
+      "postalCode": ""
     }
   },
   "maxSalary": "",
