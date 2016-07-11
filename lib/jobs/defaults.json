@@ -10,8 +10,7 @@
     "name": "Department for Work and Pensions",
     "contactPoint": "Pearl Cox",
     "email": "SPECIALISTRECRUITMENT.TEAM@DWP.GSI.GOV.UK",
-    "telephone": "02073404228",
-    "disabilityConfident": "Yes"
+    "telephone": "02073404228"
   },
   "jobLocation": {
     "@type": "Place",
@@ -26,6 +25,7 @@
   "reference": "",
   "responsibilities": "",
   "skills": "",
+  "specialCommitments": "disabilityConfident",
   "title": "Job title",
   "url": "https://www.civilservicejobs.service.gov.uk/",
   "workHours": ""
