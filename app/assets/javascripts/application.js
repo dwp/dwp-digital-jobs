@@ -20,6 +20,97 @@ function stopTyped() {
 }
 $(window).scroll(stopTyped);
 
+// custom google map API
+function initMap() {
+  var customMapType = new google.maps.StyledMapType([
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#005ea5"
+            }
+        ]
+    }
+], {
+      name: 'Custom Style'
+  });
+  var customMapTypeId = 'custom_style';
+
+  var position = {};
+
+  $.ajax({
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address={{job.jobLocation.address.postalCode}}'
+    })
+    .done(function(data) {
+      position.lat = data.results[0].geometry.location.lat;
+      position.lng = data.results[0].geometry.location.lng;
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        zoomControl: true,
+        scrollwheel: false,
+        center: new google.maps.LatLng(position.lat, position.lng),  // Leeds.
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+        }
+      });
+
+      var icon = {
+        url: '{{ asset_path }}images/pin.png',
+        scaledSize: new google.maps.Size(26, 36),
+      }
+
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(position.lat, position.lng),
+        map: map,
+        icon: icon,
+        animation: google.maps.Animation.DROP,
+        title: ''
+      });
+      marker.addListener('click', toggleBounce);
+      map.mapTypes.set(customMapTypeId, customMapType);
+      map.setMapTypeId(customMapTypeId);
+  });
+}
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
 // Default application.js
 
 function ShowHideContent() {
