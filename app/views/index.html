@@ -118,9 +118,15 @@
 
       <h2 class="heading-large">Current vacancies</h2>
 
-      {% for job in data %}
+      {% for job in data | sort(false, true, 'dateClosingString') %}
+
+      {% set nd = job.dateClosingString %}
+
+      {% if nd < now %}
+      {% else %}
+
       <div class="job">
-        <a href="/job/{{loop.index0}}">
+        <a href="/job/{{job.reference}}/{{job.slug}}">
           <h2 class="bold-medium">
             {{job.title}}
           </h2>
@@ -137,6 +143,9 @@
             </ul>
         </a>
       </div>
+
+      {% endif %}
+
       {% endfor %}
 
       <p>

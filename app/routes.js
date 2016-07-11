@@ -1,26 +1,36 @@
 var express = require('express');
-var router = express.Router();
+    router = express.Router();
+    _ = require('underscore');
 
 router.get('/', function (req, res) {
   var data = req.app.locals.data;
+  var now = new Date();
 
-  res.render('index', data);
+  for (job in data) {
+  var title = data[job].title;
+      slug = title.replace(/\s+/g, '-').toLowerCase();
+      data[job].slug = slug;
+      nd = new Date(data[job].dateClosing);
+      data[job].dateClosingString = nd;
+  }
+
+  res.render('index', {data, now});
 });
 
-router.get('/job/:id', function(req, res) {
-var data = req.app.locals.data;
+router.get('/job/:reference/:title', function(req, res) {
+  var data = req.app.locals.data;
 
   res.render('job', {
-    job : data[req.params.id],
-    jobString : JSON.stringify(data[req.params.id]),
-    jobID : [req.params.id]
+    job : _.findWhere(data, {reference: req.params.reference}),
+    jobString : JSON.stringify(_.findWhere(data, {reference: req.params.reference})),
+    jobID : [req.params.reference]
   });
 });
 
-router.get('/api/:id', function(req, res) {
-var data = req.app.locals.data;
+router.get('/api/:reference', function(req, res) {
+  var data = req.app.locals.data;
 
-res.json(data[req.params.id]);
+res.json(_.findWhere(data, {reference: req.params.reference}));
 });
 
 module.exports = router;
