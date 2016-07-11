@@ -1,9 +1,15 @@
 {
   "title": "Job title",
   "reference": "",
-  "addressLocality": "City",
-  "addressRegion": "Region",
-  "postalCode": "",
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "City",
+      "addressRegion": "County",
+      "postalCode": ""
+    }
+  },
   "maxSalary": "£",
   "workHours": "",
   "employmentType": "",

@@ -1,9 +1,15 @@
 {
   "title": "Front end developer",
   "reference": "1494151",
-  "addressLocality": "Leeds",
-  "addressRegion": "West Yorkshire",
-  "postalCode": "LS10 1ET",
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Leeds",
+      "addressRegion": "West Yorkshire",
+      "postalCode": "LS10 1ET"
+    }
+  },
   "maxSalary": "53,000",
   "workHours": "37 hours per week",
   "employmentType": "Permanent, Employed",
