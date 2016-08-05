@@ -121,7 +121,7 @@ a {
 
 }
 .heading-xxlarge {
-  @media (min-width:330px) {
+  @media (max-width:479px) {
     @include bold-36();
     margin-top: em(30, 48);
     margin-bottom: em(30, 48);
@@ -172,7 +172,7 @@ a {
   font-size:16px;
   line-height:1;
   padding-left:5px;
-  @media (min-width:330px) {
+  @media (max-width:479px) {
     font-size:16px;
     line-height:30px
   }
@@ -207,6 +207,23 @@ a {
   height: 128px;
   width: 128px;
 }
+.gallery-wrapper {
+  background: white no-repeat;
+  background-image: url(/public/images/digital-technology@2x.jpg);
+  background-size: cover;
+  display: block;
+  margin-bottom: 30px;
+  @media (max-width:479px) {
+    padding-bottom: 8.5rem;
+  }
+  @media (min-width:480px) {
+    padding-bottom: 14rem;
+  }
+  @media (min-width:800px) {
+    padding-bottom: 18rem;
+  }
+}
+
 .quoted {
   margin: 30px 45px 30px 15px;
   padding-left: 10px;
