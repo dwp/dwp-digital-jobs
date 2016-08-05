@@ -3,7 +3,7 @@ $(function(){
     $(".job-title").typed({
       stringsElement: $('#typed-strings'),
       contentType: 'type',
-      typeSpeed: 50,
+      typeSpeed: 16,
       startDelay: 500,
       backDelay: 1000
     });
