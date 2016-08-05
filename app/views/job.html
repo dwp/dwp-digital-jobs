@@ -7,19 +7,29 @@
 {% block content %}
 
 <main id="content" role="main">
-  {% include "includes/phase_banner_alpha.html" %}
+
+  <header>
+
+    <div class="department-logo">
+      <a href="/">
+        <span class="royal-crest">
+          Department<br>for Work &amp; <br>Pensions
+        </span>
+      </a>
+    </div>
+
+    <a class="link-back" href="/">Back</a>
+
+    <h1 class="heading-xxlarge">
+      {{job.title}}
+      <span class="heading-secondary">
+        at {{job.hiringOrganization.name}}
+      </span>
+    </h1>
+  </header>
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="/">Back</a>
-
-      <h1 class="heading-large">
-				{{job.title}}
-			</h1>
-
-			<p class="lede">
-        at <span class="bold-medium">{{job.hiringOrganization.name}}</span>
-			</p>
 
       {% if job.jobLocation.address.postalCode %}
 
