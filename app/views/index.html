@@ -33,16 +33,11 @@
     </h1>
   </header>
 
+  <div class="gallery-wrapper"></div>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <p class="font-large">
-       Digital and technology jobs at the UK Department for Work and Pensions.
-      </p>
-    </div>
-  </div>
-
-  <img class="img-hero" src="public/images/newcastle-hub.jpg" />
+  <p class="font-large">
+     Digital and technology jobs at the UK Department for Work and Pensions. <a href="open-jobs">See open jobs</a>
+  </p>
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -108,53 +103,11 @@
         <p>It's incredibly satisfying to see how we're making the lives of vulnerable people that bit easier.
       </p>
 
-      <h2 class="heading-large">Find out when we're hiring</h2>
+      <h2 class="heading-large">Thinking of joining us?</h2>
 
       <p>
-        We're always looking for great people to join us. Our jobs change regularly, so keep checking back.
-      <p>
-
-      <p>
-        <a class="button" href="https://twitter.com/digitalDWPjobs">
-          Get job updates
-        </a>
-      </p>
-
-      <h2 class="heading-large">Current vacancies</h2>
-
-      {% for job in data | sort(false, true, 'dateClosingString') %}
-
-      {% set nd = job.dateClosingString %}
-
-      {% if nd < now %}
-      {% else %}
-
-      <div class="job">
-        <a href="/job/{{job.reference}}/{{job.slug}}">
-          <h2 class="bold-medium">
-            {{job.title}}
-          </h2>
-            <ul>
-              <li class="font-xsmall">
-                Location: <span class="bold-small">{{job.jobLocation.address.addressLocality}}</span>
-              </li>
-              <li class="font-xsmall">
-                Salary up to: <span class="bold-small">&pound;{{job.maxSalary}}</span>
-              </li>
-              <li class="font-xsmall">
-                Closing date: <span class="bold-small">{{ job.dateClosing }}</span>
-              </li>
-            </ul>
-        </a>
-      </div>
-
-      {% endif %}
-
-      {% endfor %}
-
-      <p>
-        <a href="http://digital.dwp.gov.uk/careers/search-vacancies/" class="bold-xsmall">
-          View all <span class="visuallyhidden">jobs on DWP Careers</span>
+        <a class="button" href="open-jobs">
+          See open jobs
         </a>
       </p>
 

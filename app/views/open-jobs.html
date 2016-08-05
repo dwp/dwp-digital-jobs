@@ -1,7 +1,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block page_title %}
-  Graduates and apprentices - Digital DWP Careers
+  Our offer - Digital DWP Careers
 {% endblock %}
 
 {% block content %}
@@ -19,42 +19,54 @@
     </div>
 
     <h1 class="heading-xxlarge">
-      Graduates and apprentices
-      <span class="heading-secondary">
-        Start your career in government
-      </span>
+      Open jobs
     </h1>
   </header>
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <p class="lede">
-        We are looking for bright and diverse individuals to join our rapidly transforming organisation. All you need is a passion for Digital Technology and making a difference to people’s lives.
-      </p>
+      {% for job in data | sort(false, true, 'dateClosingString') %}
+
+      {% set nd = job.dateClosingString %}
+
+      {% if nd < now %}
+      {% else %}
+
+      <h2 class="heading-large">Current vacancies</h2>
+
+      <div class="job">
+        <a href="/job/{{job.reference}}/{{job.slug}}">
+          <h2 class="bold-medium">
+            {{job.title}}
+          </h2>
+            <ul>
+              <li class="font-xsmall">
+                Location: <span class="bold-small">{{job.jobLocation.address.addressLocality}}</span>
+              </li>
+              <li class="font-xsmall">
+                Salary up to: <span class="bold-small">&pound;{{job.maxSalary}}</span>
+              </li>
+              <li class="font-xsmall">
+                Closing date: <span class="bold-small">{{ job.dateClosing }}</span>
+              </li>
+            </ul>
+        </a>
+      </div>
+
+      {% endif %}
+
+      {% endfor %}
+
+      <h2 class="heading-large">Can't find the job you're looking for?</h2>
 
       <p>
-        Being part of a DWP development scheme is a great way to work on some of Europe’s largest projects, transform the way the public interacts with public services and deliver them using the latest technologies. Plus, we will fund your academic learning at the same time.
-      </p>
-
-      <ul class="list list-bullet">
-        <li>
-          Apprenticeships
-        </li>
-        <li>
-          Graduate opportunities
-        </li>
-      </ul>
+        We're always looking for great people to join us. Our jobs change regularly, so keep checking back.
+      <p>
 
       <p>
-        Come and join the Digital Transformation!
-      </p>
-
-      <h2 class="heading-large">Thinking of joining us?</h2>
-
-      <p>
-        <a class="button" href="open-jobs">
-          See open jobs
+        <a class="button" href="https://twitter.com/digitalDWPjobs">
+          Get job updates
         </a>
       </p>
 

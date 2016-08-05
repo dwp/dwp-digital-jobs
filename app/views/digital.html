@@ -49,44 +49,11 @@
         Working together to transform the way we deliver public services
       </p>
 
-      <h2 class="heading-large">Find out when we're hiring</h2>
+      <h2 class="heading-large">Thinking of joining us?</h2>
 
       <p>
-        We're always looking for great people to join us. Our jobs change regularly, so keep checking back.
-      <p>
-
-      <p>
-        <a class="button" href="https://twitter.com/digitalDWPjobs">
-          Get job updates
-        </a>
-      </p>
-
-      <h2 class="heading-large">Current vacancies</h2>
-
-      {% for job in jobs %}
-      <div class="job">
-        <a href="/{{loop.index0}}">
-          <h2 class="bold-medium">
-            {{job.title}}
-          </h2>
-            <ul>
-              <li class="font-xsmall">
-                Location: <span class="bold-small">{{job.jobLocation.address.addressLocality}}</span>
-              </li>
-              <li class="font-xsmall">
-                Salary up to: <span class="bold-small">&pound;{{job.maxSalary}}</span>
-              </li>
-              <li class="font-xsmall">
-                Closing date: <span class="bold-small">{{ job.dateClosing }}</span>
-              </li>
-            </ul>
-        </a>
-      </div>
-      {% endfor %}
-
-      <p>
-        <a href="http://digital.dwp.gov.uk/careers/search-vacancies/" class="bold-xsmall">
-          View all <span class="visuallyhidden">jobs on DWP Careers</span>
+        <a class="button" href="open-jobs">
+          See open jobs
         </a>
       </p>
 
