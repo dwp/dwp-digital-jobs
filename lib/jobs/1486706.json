@@ -1,0 +1,23 @@
+{
+  "title": "Principal Architects (Domain & Solution) and Lead Architects (Domain & Solution)",
+  "reference": "1486706",
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Blackpool, Manchester, Newcastle, Sheffield, Warrington",
+      "addressRegion": "",
+      "postalCode": ""
+    }
+  },
+  "maxSalary": "68,115",
+  "minSalary": "",
+  "workHours": "37 hours per week",
+  "employmentType": "Permanent, Employed",
+  "dateClosing": "29 August 2016",
+  "datePosted": "5 August 2016",
+  "responsibilities": "Using your existing knowledge of architecture solution implementation, product selection and application strategy definition you will define and deliver solutions, integrating both custom and packaged technologies.<br><br>You will work with strategists, planners, designers and suppliers covering the complete life cycle of systems delivery from the initial agreement of user needs and functional and technical requirements through to delivery and operation.<br><br>You will be :-<br><br>Creating technical architectures that are robust, scalable, open and secure.<br><br>Designing and delivering technology solutions that can be integrated into complex software environments.<br><br>Evaluating technical proposals from suppliers.<br><br>Solving complex technical problems.<br><br>Organising and performing prototyping and proof of technology concepts.<br><br>Undertaking rapid development of user-driven prototypes to identify technical options.",
+  "skills": "Degree or Masters in Computer Science<br>TOGAF Certified<br>ISEB Certification in Enterprise and Solution Architecture",
+  "description": "Up to £68,115 for Principal Architect & £55,675 Lead Architect.<br><br>Do you have the desire and ambition to come and shake up outdated Government technology and fundamentally transform the way our business operates?<br><br>We invite you to join one of the largest technology challenges in the UK today – a once in a generation programme of transformational change.<br><br>Here at the Department for Work and Pensions (DWP) we are re-platforming our entire IT onto new hardware, operating systems, application server technologies and application integrations, conducting large scale data migration, introducing new functionality and modernising front end user interfaces and applications. These IT systems underpin the services that support 22m citizens, annual processing of 7.35m benefit claims, payment of £165bn in benefits and pensions, and over 90,000 employees across 950 locations.<br><br>We are keen to recruit the best architecture talent out there, people who have hands on delivered multi-tier architectures/applications and micro-service architectures, with a passion and detailed technical knowledge of any of the following:-<br><br>Web technologies including HTTP, HTML, CSS, XML, JSON, SOAP, REST<br>Enterprise scale database technologies including Oracle & Enterprise DB and NoSQL, Cassandra & MongoDB<br>Operating systems including Linux & Solaris<br>Application server platforms including as Websphere & Jboss<br>Virtualisation technologies including as VMware, OVM, HyperV",
+  "url": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=cGFnZWFjdGlvbj12aWV3dmFjYnlqb2JsaXN0Jm93bmVyPTUwNzAwMDAmcGFnZWNsYXNzPUpvYnMmc2VhcmNoX3NsaWNlX2N1cnJlbnQ9MSZvd25lcnR5cGU9ZmFpciZ1c2Vyc2VhcmNoY29udGV4dD0yMDkzOTM3OSZjc291cmNlPWNzcXNlYXJjaCZqb2JsaXN0X3ZpZXdfdmFjPTE0ODY3MDYmcmVxc2lnPTE0NjU5OTk3NDQtYmQ1MWNlZDJlZTczYWI1ZGRmNTEwMGYyYzY2NjkyZmUxNjYxNDNlZA=="
+}
