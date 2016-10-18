@@ -45,6 +45,10 @@
 			<table>
 		    <tbody>
           <tr>
+			       <td>Reference</td>
+			       <td class="bold-small">{{job.jobReference}}</td>
+		      </tr>
+          <tr>
             {% if not job.jobLocation.address.postalCode %}
 		        <td>Location</td>
 		        <td class="bold-small">{{job.jobLocation.address.addressLocality}}{% if job.jobLocation.address.addressRegion %}, {{job.jobLocation.address.addressRegion}}{% endif %}</td>
@@ -52,7 +56,7 @@
 		      <tr>
             {% endif %}
 		        <td>Salary</td>
-		        <td class="bold-small">{% if job.minSalary %}&pound;{{job.minSalary}} &mdash; {% else %}Up to{% endif %} {% if job.maxSalary %}&pound;{{job.maxSalary}}{% endif %}</td>
+		        <td class="bold-small">{% if job.minSalary %}{{job.minSalary}} &mdash; {% else %}{% endif %} {% if job.maxSalary %}{{job.maxSalary}}{% endif %}</td>
 		      </tr>
           {% if job.incentiveCompensation %}
 					<tr>

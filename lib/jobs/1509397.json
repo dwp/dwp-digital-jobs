@@ -1,0 +1,22 @@
+{
+  "title": "SAS Developer",
+  "reference": "1509397",
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Newcastle",
+      "addressRegion": "",
+      "postalCode": ""
+    }
+  },
+  "jobReference": "1509397",
+  "maxSalary": "Upto £38,380",
+  "workHours": "37 hours per week",
+  "employmentType": "Permanent, Employed",
+  "dateClosing": "23 October 2016",
+  "datePosted": "5 September 2016",
+  "responsibilities": "",
+  "description": "Do you want to be part of an organisation that is currently undertaking one of the biggest digital transformation programmes in the UK?<br/><br/>Here at DWP we have fantastic opportunities for Data Engineers who are confident working with big Data technologies to support new and innovative analytics solutions. A genuine and exciting opportunity to make a difference to the lives of 22 million people in the UK, including some of the most vulnerable.<br/><br/>You will be responsible for delivering all aspects of ETL code development activities to meet customer needs to agreed timescales. Engaging with Stakeholders at all stages of the project lifecycle, from discovery through to delivery.<br/><br/>As a Data Engineer, you will be accountable for translating user requirements and Data models into effective, robust ETL solutions within SAS as well as contributing to the development and implementation of an Agile based MI development approach for the MIS SAS Solution.<br/><br/>The ideal candidate would have hands on experience in design and development of ETL solutions SAS programming and specialist SAS knowledge as well as holding an Advanced SAS certification.<br/><br/>DWP is an equal opportunity employer with a diverse workforce. We welcome applications regardless of age, gender, race or sexuality.",
+  "url": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=cGFnZWFjdGlvbj12aWV3dmFjYnlqb2JsaXN0Jm93bmVyPTUwNzAwMDAmcGFnZWNsYXNzPUpvYnMmc2VhcmNoX3NsaWNlX2N1cnJlbnQ9MSZvd25lcnR5cGU9ZmFpciZ1c2Vyc2VhcmNoY29udGV4dD0yMDkzOTM3OSZjc291cmNlPWNzcXNlYXJjaCZqb2JsaXN0X3ZpZXdfdmFjPTE0ODY3MDYmcmVxc2lnPTE0NjU5OTk3NDQtYmQ1MWNlZDJlZTczYWI1ZGRmNTEwMGYyYzY2NjkyZmUxNjYxNDNlZA=="
+}
