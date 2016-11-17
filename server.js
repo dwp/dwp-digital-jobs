@@ -15,14 +15,14 @@ var path = require('path'),
     packageJson = require(__dirname + '/package.json'),
 
     // Grab environment variables specified in Procfile or as Heroku config vars
-    releaseVersion = packageJson.version;
-    username = process.env.USERNAME,
-    password = process.env.PASSWORD,
-    env      = process.env.NODE_ENV || 'development',
-    useAuth  = process.env.USE_AUTH || config.useAuth;
+    //releaseVersion = packageJson.version;
+    //username = process.env.USERNAME,
+    //password = process.env.PASSWORD,
+    //env      = process.env.NODE_ENV || 'development',
+    //useAuth  = process.env.USE_AUTH || config.useAuth;
 
-    env      = env.toLowerCase();
-    useAuth  = useAuth.toLowerCase();
+      //env      = env.toLowerCase();
+    //useAuth  = useAuth.toLowerCase();
 
 // Load all the job data from the files.
 var defaults = JSON.parse(fs.readFileSync(__dirname + '/lib/jobs/defaults.json').toString());
