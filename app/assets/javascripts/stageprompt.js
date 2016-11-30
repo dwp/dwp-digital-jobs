@@ -19,12 +19,12 @@ GOVUK.performance.stageprompt = (function () {
     if (journeyStage) {
       analyticsCallback.apply(null, splitAction(journeyStage));
     }
-    
+
     journeyHelpers.on('click', function (event) {
       analyticsCallback.apply(null, splitAction($(this).data('journey-click')));
     });
   };
-  
+
   setupForGoogleAnalytics = function () {
     setup(GOVUK.performance.sendGoogleAnalyticsEvent);
   };
@@ -36,5 +36,12 @@ GOVUK.performance.stageprompt = (function () {
 }());
 
 GOVUK.performance.sendGoogleAnalyticsEvent = function (category, event, label) {
-  _gaq.push(['_trackEvent', category, event, label, undefined, true]);
+
+  if(typeof(__gaTracker) === 'function') {
+    __gaTracker('send', 'event', category, event, label);
+  } else if (window.ga && typeof(window.ga) === 'function') {
+    ga('send', 'event', category, event, label);
+  } else {
+    _gaq.push(['_trackEvent', category, event, label, undefined, true]);
+  }
 };
