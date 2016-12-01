@@ -239,4 +239,7 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
+  // stage prompt
+  GOVUK.performance.stageprompt.setupForGoogleAnalytics();
+
 });
